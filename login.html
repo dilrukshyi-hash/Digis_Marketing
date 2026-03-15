@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – Digis Digital Agency</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body { background: var(--bg-dark); display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+    .login-wrap { width: 100%; max-width: 440px; padding: 1rem; }
+    .login-card { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 28px; padding: 3rem 2.5rem; backdrop-filter: blur(20px); position: relative; overflow: hidden; }
+    .login-card::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(108,99,255,0.2), transparent 70%); }
+    .login-card::after { content: ''; position: absolute; bottom: -60px; left: -60px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(0,212,255,0.1), transparent 70%); }
+    .login-logo { width: 60px; height: 60px; background: var(--gradient-btn); border-radius: 18px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.6rem; color: white; margin: 0 auto 1.5rem; box-shadow: 0 8px 32px var(--primary-glow); }
+    .login-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.7rem; font-weight: 800; text-align: center; margin-bottom: 0.4rem; }
+    .login-sub { color: var(--text-muted); text-align: center; font-size: 0.9rem; margin-bottom: 2rem; }
+    .login-btn { width: 100%; background: var(--gradient-btn); color: white; font-weight: 700; font-size: 1rem; padding: 0.9rem; border-radius: 12px; border: none; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 20px var(--primary-glow); margin-top: 0.5rem; }
+    .login-btn:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 8px 32px var(--primary-glow); }
+    .login-btn:active { transform: translateY(0); }
+    .role-badge { display: inline-block; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+    .role-admin { background: rgba(108,99,255,0.2); color: #a599ff; border: 1px solid rgba(108,99,255,0.3); }
+    .role-manager { background: rgba(0,212,255,0.15); color: #00D4FF; border: 1px solid rgba(0,212,255,0.3); }
+    .role-teamwork { background: rgba(34,211,160,0.15); color: #22d3a0; border: 1px solid rgba(34,211,160,0.3); }
+    .error-msg { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.85rem; color: #fca5a5; margin-bottom: 1rem; display: none; }
+    .back-link { text-align: center; margin-top: 1.5rem; }
+    .back-link a { color: var(--text-muted); font-size: 0.85rem; text-decoration: none; transition: color 0.2s; }
+    .back-link a:hover { color: var(--primary); }
+  </style>
+</head>
+<body>
+  <div class="login-wrap">
+    <div class="login-card">
+      <div style="position:relative;z-index:1;">
+        <div style="text-align:center; margin-bottom:1.5rem;">
+          <img src="img/logo.png" alt="Digis Digital Marketing" style="height:90px; width:auto; display:inline-block;" />
+        </div>
+        <div class="login-title">Welcome Back</div>
+        <div class="login-sub">Sign in to your Digis Digital dashboard</div>
+        <div class="error-msg" id="errorMsg">⚠️ <span id="errorText">Invalid credentials</span></div>
+        <form id="loginForm" autocomplete="on">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" autocomplete="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required />
+          </div>
+          <button type="submit" class="login-btn" id="loginBtn">
+            <span id="btnText">Sign In</span>
+          </button>
+        </form>
+        <div class="back-link">
+          <a href="index.html">← Back to Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    // Redirect if already logged in
+    window.addEventListener('DOMContentLoaded', async () => {
+      await DigiDB.init();
+      const session = DigiAuth.getSession();
+      if (session) window.location.href = 'admin.html';
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+      const btn = document.getElementById('loginBtn');
+      const btnText = document.getElementById('btnText');
+      const errorMsg = document.getElementById('errorMsg');
+      const errorText = document.getElementById('errorText');
+
+      btn.disabled = true;
+      btnText.textContent = 'Signing in...';
+      errorMsg.style.display = 'none';
+
+      try {
+        const result = await DigiAuth.login(username, password);
+        if (result.success) {
+          btnText.textContent = '✓ Success! Redirecting...';
+          setTimeout(() => { window.location.href = 'admin.html'; }, 700);
+        } else {
+          errorText.textContent = result.error;
+          errorMsg.style.display = 'block';
+          btn.disabled = false;
+          btnText.textContent = 'Sign In';
+        }
+      } catch (err) {
+        errorText.textContent = 'Something went wrong. Please try again.';
+        errorMsg.style.display = 'block';
+        btn.disabled = false;
+        btnText.textContent = 'Sign In';
+      }
+    });
+  </script>
+</body>
+</html>

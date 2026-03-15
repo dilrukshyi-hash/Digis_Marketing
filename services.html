@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services – Digis Digital</title>
+  <meta name="description" content="Explore the full range of digital marketing services offered by Digis Digital – from SEO and social media to PPC and content marketing." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .glow-orb-1 { background: rgba(192,25,45,0.18) !important; }
+    .glow-orb-2 { background: rgba(139,0,0,0.12) !important; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-brand">
+      <img src="img/logo.png" alt="Digis Digital Marketing" style="height:46px;width:auto;display:block;" />
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="nav-cta">Login</a>
+    </div>
+    <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="section" style="padding-top:8rem; padding-bottom:4rem; position:relative; overflow:hidden;">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="section-inner text-center">
+      <span class="section-label fade-up">What We Offer</span>
+      <h1 class="section-title fade-up delay-1" id="servicesTitle">Our Services</h1>
+      <p class="section-subtitle fade-up delay-2" style="margin:0 auto;" id="servicesSubtitle">Loading...</p>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <section class="section" style="padding-top:2rem;">
+    <div class="section-inner">
+      <div class="grid-3" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <!-- PROCESS SECTION -->
+  <section class="section" style="background:rgba(255,255,255,0.015); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="section-inner">
+      <div class="text-center" style="margin-bottom:3rem;">
+        <span class="section-label">How We Work</span>
+        <h2 class="section-title">Our Process</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:1.5rem;">
+        <div style="text-align:center; position:relative;">
+          <div style="width:64px;height:64px;border-radius:50%;background:var(--gradient-btn);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 1rem;box-shadow:0 4px 20px var(--primary-glow);">🔎</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;margin-bottom:0.5rem;">01. Discovery</div>
+          <p style="color:var(--text-muted);font-size:0.85rem;">We deep-dive into your business, competitors, and target audience.</p>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#00D4FF,#6C63FF);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 1rem;box-shadow:0 4px 20px var(--accent-glow);">🗺️</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;margin-bottom:0.5rem;">02. Strategy</div>
+          <p style="color:var(--text-muted);font-size:0.85rem;">We craft a custom digital growth strategy tailored to your goals.</p>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#22d3a0,#00D4FF);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 1rem;box-shadow:0 4px 20px rgba(34,211,160,0.3);">🚀</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;margin-bottom:0.5rem;">03. Execute</div>
+          <p style="color:var(--text-muted);font-size:0.85rem;">We launch and manage campaigns with precision and creativity.</p>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#f9a825,#ef4444);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 1rem;box-shadow:0 4px 20px rgba(249,168,37,0.3);">📊</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;margin-bottom:0.5rem;">04. Optimize</div>
+          <p style="color:var(--text-muted);font-size:0.85rem;">We continuously analyze, learn, and optimize for maximum ROI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="section-inner text-center">
+      <h2 class="section-title">Not Sure Which Service <span style="background:var(--gradient-btn);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">You Need?</span></h2>
+      <p class="section-subtitle" style="margin:1rem auto 2rem;">Book a free consultation call with our experts, and we'll recommend the right strategy for your business.</p>
+      <a href="https://wa.me/94762167260?text=Hello%20Digis%20Digital%2C%20I%20would%20like%20a%20free%20consultation." target="_blank" rel="noopener" class="btn btn-primary">💬 Book Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+                <div class="footer-brand">
+          <a href="index.html" style="margin-bottom:1rem; display:inline-block;">
+            <img src="img/logo.png" alt="Digis Digital Marketing" style="height:50px;width:auto;display:block;" />
+          </a>
+          <p id="footerTagline">Empowering brands with smart digital strategies.</p>
+          <div style="display:flex; gap:0.75rem; margin-top:1.25rem;">
+            <a href="https://www.facebook.com/digis.lk" target="_blank" rel="noopener" title="Facebook" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:all 0.2s;font-size:0.85rem;font-weight:700;" onmouseover="this.style.borderColor='var(--primary)';this.style.background='rgba(192,25,45,0.15)';" onmouseout="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.06)';">f</a>
+            <a href="https://www.instagram.com/digis.lk/" target="_blank" rel="noopener" title="Instagram" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:all 0.2s;font-size:0.75rem;font-weight:700;" onmouseover="this.style.borderColor='var(--primary)';this.style.background='rgba(192,25,45,0.15)';" onmouseout="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.06)';">ig</a>
+            <a href="https://www.linkedin.com/in/suneth-anurudda-a5b424377/" target="_blank" rel="noopener" title="LinkedIn" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:all 0.2s;font-size:0.75rem;font-weight:700;" onmouseover="this.style.borderColor='var(--primary)';this.style.background='rgba(192,25,45,0.15)';" onmouseout="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.06)';">in</a>
+            <a href="https://whatsapp.com/channel/0029Vb6W3sHKbYMFneuImf0X" target="_blank" rel="noopener" title="WhatsApp Channel" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:all 0.2s;font-size:1rem;" onmouseover="this.style.borderColor='#25D366';this.style.background='rgba(37,211,102,0.12)';" onmouseout="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.06)';">&#128172;</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html">Staff Login</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html">Social Media</a>
+          <a href="services.html">SEO</a>
+          <a href="services.html">PPC Advertising</a>
+          <a href="services.html">Content Marketing</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:+94762167260" id="footerPhone">+94 76 216 7260</a>
+          <a href="mailto:digisdigital@gmail.com" id="footerEmail">digisdigital@gmail.com</a>
+          <a href="#" id="footerAddress">Colombo, Sri Lanka</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Digis Digital. All rights reserved.</p>
+        <p style="color:var(--primary);">Made with ❤️ in Sri Lanka</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/db.js"></script>
+  <script>
+    window.addEventListener('scroll', () => document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50));
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+
+    const icons = ['📱','🔍','💰','✍️','💻','📧'];
+    const svcImages = ['img/service_social.png','img/service_seo.png','img/service_ppc.png','','',''];
+    const colors = [
+      'rgba(192,25,45,0.15)', 'rgba(192,25,45,0.12)', 'rgba(192,25,45,0.1)',
+      'rgba(176,184,200,0.1)', 'rgba(176,184,200,0.08)', 'rgba(192,25,45,0.08)'
+    ];
+
+    async function loadContent() {
+      await DigiDB.init();
+      const data = {};
+      const allKeys = ['services_title','services_subtitle','footer_tagline','contact_phone','contact_email','contact_address'];
+      for (let i = 1; i <= 6; i++) { allKeys.push(`service_${i}_title`, `service_${i}_desc`); }
+      for (const k of allKeys) { const r = await DigiDB.get(DigiDB.STORES.CONTENT, k); if (r) data[k] = r.value; }
+
+      const set = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
+      set('servicesTitle', data.services_title);
+      set('servicesSubtitle', data.services_subtitle);
+      set('footerTagline', data.footer_tagline);
+      if (data.contact_phone) { set('footerPhone', data.contact_phone); document.getElementById('footerPhone').href = 'tel:' + data.contact_phone.replace(/\s/g,''); }
+      if (data.contact_email) { set('footerEmail', data.contact_email); document.getElementById('footerEmail').href = 'mailto:' + data.contact_email; }
+      set('footerAddress', data.contact_address);
+
+      const grid = document.getElementById('servicesGrid');
+      grid.innerHTML = '';
+      for (let i = 1; i <= 6; i++) {
+        const title = data[`service_${i}_title`] || '';
+        const desc = data[`service_${i}_desc`] || '';
+        if (!title) continue;
+        const imgHtml = svcImages[i-1] ? `<img src="${svcImages[i-1]}" alt="${title}" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:16px 16px 0 0;" onerror="this.style.display='none';" />` : '';
+        grid.innerHTML += `
+          <div class="card" style="padding:0; overflow:hidden;">
+            ${imgHtml}
+            <div class="card-content" style="padding:1.5rem;">
+              <div class="card-icon" style="background:${colors[i-1]}">${icons[i-1]}</div>
+              <h3>${title}</h3>
+              <p>${desc}</p>
+              <a href="contact.html" style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--primary);font-size:0.85rem;font-weight:600;text-decoration:none;margin-top:1rem;transition:gap 0.2s;" onmouseover="this.style.gap='0.7rem';" onmouseout="this.style.gap='0.4rem';">Get Started →</a>
+            </div>
+          </div>`;
+      }
+    }
+    loadContent();
+  </script>
+</body>
+</html>

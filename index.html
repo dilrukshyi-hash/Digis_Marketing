@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digis Digital – Digital Marketing Agency</title>
+  <meta name="description" content="Digis Digital is a full-service digital marketing agency helping businesses grow through data-driven strategies in Sri Lanka." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .glow-orb-1 { background: rgba(192,25,45,0.18) !important; }
+    .glow-orb-2 { background: rgba(139,0,0,0.12) !important; }
+    .hero-badge { border-color: rgba(192,25,45,0.4); color: #e87070; background: rgba(192,25,45,0.12); }
+    .hero-badge::before { background: #C0192D; }
+    .hero-img-wrap { position:absolute; right:0; top:0; height:100%; width:48%; overflow:hidden; pointer-events:none; }
+    .hero-img-wrap img { width:100%; height:100%; object-fit:cover; opacity:0.45; mask-image:linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); -webkit-mask-image:linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); }
+    .section-img { width:100%; border-radius:20px; object-fit:cover; }
+    .service-img { width:100%; height:200px; object-fit:cover; border-radius:12px 12px 0 0; margin-bottom:1.25rem; }
+    @media(max-width:900px){ .hero-img-wrap { display:none; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-brand">
+      <img src="img/logo.png" alt="Digis Digital Marketing" style="height:46px;width:auto;display:block;" />
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="nav-cta">Login</a>
+    </div>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero section" id="home" style="overflow:hidden;">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <!-- Hero image on right side -->
+    <div class="hero-img-wrap">
+      <img src="img/hero_digital.png" alt="Digital Marketing" />
+    </div>
+    <div class="section-inner hero-content" style="position:relative;z-index:2;">
+      <div class="hero-badge fade-up">🚀 Sri Lanka's Premier Digital Agency</div>
+      <h1 class="fade-up delay-1">
+        <span id="heroTitle">We Grow Your Brand<br /><span class="gradient-text">Digitally</span></span>
+      </h1>
+      <p class="fade-up delay-2" id="heroSubtitle">Loading...</p>
+      <div class="btn-group fade-up delay-3">
+        <a href="https://wa.me/94762167260?text=Hello%20Digis%20Digital%2C%20I%20would%20like%20a%20free%20consultation." target="_blank" rel="noopener" class="btn btn-primary" id="heroCta">💬 Get a Free Consultation</a>
+        <a href="services.html" class="btn btn-outline">Our Services</a>
+      </div>
+      <div class="stats-bar fade-up delay-4">
+        <div class="stat-item">
+          <div class="stat-num">150+</div>
+          <div class="stat-label">Clients Served</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">5x</div>
+          <div class="stat-label">Average ROI</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">98%</div>
+          <div class="stat-label">Client Retention</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES PREVIEW -->
+  <section class="section" style="background:rgba(255,255,255,0.015); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="section-inner">
+      <div class="text-center" style="margin-bottom:3rem;">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title" id="servicesTitle">Our Core Services</h2>
+        <p class="section-subtitle" id="servicesSubtitle">Data-driven digital strategies that deliver measurable results.</p>
+      </div>
+      <div class="grid-3" id="servicesGrid"></div>
+      <div style="text-align:center; margin-top:2.5rem;">
+        <a href="services.html" class="btn btn-outline">View All Services →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section">
+    <div class="section-inner">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+        <div>
+          <span class="section-label">Why Digis Digital</span>
+          <h2 class="section-title">Built for Results,<br/><span style="background:var(--gradient-btn);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Not Just Clicks</span></h2>
+          <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:2rem; font-size:0.95rem;">We don't just run campaigns – we build growth engines that consistently deliver measurable ROI for your business. Every strategy is backed by data and a deep understanding of your audience.</p>
+          <div style="display:flex; flex-direction:column; gap:1rem;">
+            <div style="display:flex; align-items:center; gap:1rem;">
+              <div style="width:40px; height:40px; border-radius:10px; background:rgba(192,25,45,0.15); display:flex; align-items:center; justify-content:center;">✅</div>
+              <div><strong>Data-Driven Strategy</strong><br/><span style="color:var(--text-muted); font-size:0.85rem;">Every decision backed by analytics and insights</span></div>
+            </div>
+            <div style="display:flex; align-items:center; gap:1rem;">
+              <div style="width:40px; height:40px; border-radius:10px; background:rgba(192,25,45,0.12); display:flex; align-items:center; justify-content:center;">⚡</div>
+              <div><strong>Fast Execution</strong><br/><span style="color:var(--text-muted); font-size:0.85rem;">Campaigns up and running within 48 hours</span></div>
+            </div>
+            <div style="display:flex; align-items:center; gap:1rem;">
+              <div style="width:40px; height:40px; border-radius:10px; background:rgba(192,25,45,0.1); display:flex; align-items:center; justify-content:center;">📊</div>
+              <div><strong>Transparent Reporting</strong><br/><span style="color:var(--text-muted); font-size:0.85rem;">Real-time dashboards & monthly performance reports</span></div>
+            </div>
+          </div>
+          <div style="margin-top:2rem;">
+            <a href="about.html" class="btn btn-primary">Learn About Us →</a>
+          </div>
+        </div>
+        <div style="position:relative;">
+          <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:24px; padding:2rem; position:relative; overflow:hidden;">
+            <div style="position:absolute; inset:0; background:var(--gradient-card); opacity:0.5;"></div>
+            <div style="position:relative; z-index:1;">
+              <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent); margin-bottom:1rem;">Campaign Performance</div>
+              <div style="display:flex; flex-direction:column; gap:1rem;">
+                <div>
+                  <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem; font-size:0.85rem;"><span>Social Media Reach</span><span style="color:var(--success);">+247%</span></div>
+                  <div style="height:6px; background:rgba(255,255,255,0.08); border-radius:3px;"><div style="height:100%; width:85%; background:var(--gradient-btn); border-radius:3px;"></div></div>
+                </div>
+                <div>
+                  <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem; font-size:0.85rem;"><span>Lead Generation</span><span style="color:var(--success);">+189%</span></div>
+                  <div style="height:6px; background:rgba(255,255,255,0.08); border-radius:3px;"><div style="height:100%; width:72%; background:linear-gradient(90deg,#C0192D,#8B0000); border-radius:3px;"></div></div>
+                </div>
+                <div>
+                  <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem; font-size:0.85rem;"><span>Conversion Rate</span><span style="color:var(--success);">+312%</span></div>
+                  <div style="height:6px; background:rgba(255,255,255,0.08); border-radius:3px;"><div style="height:100%; width:90%; background:linear-gradient(90deg,#960f20,#C0192D); border-radius:3px;"></div></div>
+                </div>
+                <div>
+                  <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem; font-size:0.85rem;"><span>Revenue Growth</span><span style="color:var(--success);">+421%</span></div>
+                  <div style="height:6px; background:rgba(255,255,255,0.08); border-radius:3px;"><div style="height:100%; width:95%; background:linear-gradient(90deg,#B0B8C8,#C0192D); border-radius:3px;"></div></div>
+                </div>
+              </div>
+              <div style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--border); display:flex; justify-content:space-between;">
+                <div><div style="font-size:1.4rem; font-weight:800; color:var(--success);">5.2x</div><div style="font-size:0.75rem; color:var(--text-muted);">Average ROAS</div></div>
+                <div><div style="font-size:1.4rem; font-weight:800; color:var(--accent);">96%</div><div style="font-size:0.75rem; color:var(--text-muted);">Goal Achievement</div></div>
+                <div><div style="font-size:1.4rem; font-weight:800; color:var(--primary);">150+</div><div style="font-size:0.75rem; color:var(--text-muted);">Happy Clients</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="section" style="background:rgba(192,25,45,0.08); border-top:1px solid rgba(192,25,45,0.2); border-bottom:1px solid rgba(192,25,45,0.2);">
+    <div class="section-inner text-center">
+      <h2 class="section-title">Ready to <span style="background:var(--gradient-btn);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Grow Your Business?</span></h2>
+      <p class="section-subtitle" style="margin:1rem auto 2rem;">Join 150+ businesses already scaling their growth with Digis Digital.</p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="https://wa.me/94762167260?text=Hello%20Digis%20Digital%2C%20I%20would%20like%20a%20free%20consultation." target="_blank" rel="noopener" class="btn btn-primary">💬 Start on WhatsApp →</a>
+        <a href="https://wa.me/94762167260" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:#25D366;color:#25D366;">📞 WhatsApp Us Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom:1rem; display:inline-flex;">
+            <div class="nav-logo">D</div>
+            <div class="nav-name" style="margin-left:0.5rem;">Digis <span>Digital</span></div>
+          </a>
+          <p id="footerTagline">Empowering brands with smart digital strategies.</p>
+          <div style="display:flex; gap:0.75rem; margin-top:1.25rem;">
+            <a href="https://www.facebook.com/digis.lk" target="_blank" rel="noopener" title="Facebook" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:all 0.2s;font-size:0.85rem;font-weight:700;" onmouseover="this.style.borderColor='var(--primary)';this.style.background='rgba(192,25,45,0.15)';" onmouseout="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.06)';">f</a>
+            <a href="https://www.instagram.com/digis.lk/" target="_blank" rel="noopener" title="Instagram" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:all 0.2s;font-size:0.75rem;font-weight:700;" onmouseover="this.style.borderColor='var(--primary)';this.style.background='rgba(192,25,45,0.15)';" onmouseout="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.06)';">ig</a>
+            <a href="https://www.linkedin.com/in/suneth-anurudda-a5b424377/" target="_blank" rel="noopener" title="LinkedIn" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:all 0.2s;font-size:0.75rem;font-weight:700;" onmouseover="this.style.borderColor='var(--primary)';this.style.background='rgba(192,25,45,0.15)';" onmouseout="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.06)';">in</a>
+            <a href="https://whatsapp.com/channel/0029Vb6W3sHKbYMFneuImf0X" target="_blank" rel="noopener" title="WhatsApp Channel" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:all 0.2s;font-size:1rem;" onmouseover="this.style.borderColor='#25D366';this.style.background='rgba(37,211,102,0.12)';" onmouseout="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.06)';">💬</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html">Staff Login</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html">Social Media</a>
+          <a href="services.html">SEO</a>
+          <a href="services.html">PPC Advertising</a>
+          <a href="services.html">Content Marketing</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:+94762167260" id="footerPhone">+94 76 216 7260</a>
+          <a href="mailto:digisdigital@gmail.com" id="footerEmail">digisdigital@gmail.com</a>
+          <a href="contact.html" id="footerAddress">Colombo, Sri Lanka</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Digis Digital. All rights reserved.</p>
+        <p style="color:var(--primary);">Made with ❤️ in Sri Lanka</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/db.js"></script>
+  <script>
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+
+    const svcImages = ['img/service_social.png', 'img/service_seo.png', 'img/service_ppc.png'];
+    const icons = ['📱','🔍','💰'];
+
+    async function loadContent() {
+      await DigiDB.init();
+      const keys = [
+        'hero_title','hero_subtitle','hero_cta',
+        'services_title','services_subtitle',
+        'service_1_title','service_1_desc',
+        'service_2_title','service_2_desc',
+        'service_3_title','service_3_desc',
+        'footer_tagline','contact_phone','contact_email','contact_address'
+      ];
+      const data = {};
+      for (const k of keys) { const rec = await DigiDB.get(DigiDB.STORES.CONTENT, k); if (rec) data[k] = rec.value; }
+
+      const set = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
+      set('heroSubtitle', data.hero_subtitle);
+      if (data.hero_cta) document.getElementById('heroCta').textContent = data.hero_cta + ' →';
+      set('footerTagline', data.footer_tagline);
+      if (data.contact_phone) { set('footerPhone', data.contact_phone); document.getElementById('footerPhone').href = 'tel:' + data.contact_phone.replace(/\s/g,''); }
+      if (data.contact_email) { set('footerEmail', data.contact_email); document.getElementById('footerEmail').href = 'mailto:' + data.contact_email; }
+      set('footerAddress', data.contact_address);
+
+      const grid = document.getElementById('servicesGrid');
+      grid.innerHTML = '';
+      for (let i = 1; i <= 3; i++) {
+        const title = data[`service_${i}_title`] || '';
+        const desc = data[`service_${i}_desc`] || '';
+        grid.innerHTML += `
+          <div class="card" style="padding:0; overflow:hidden;">
+            <img src="${svcImages[i-1]}" alt="${title}" style="width:100%;height:190px;object-fit:cover;display:block;" onerror="this.style.display='none';" />
+            <div class="card-content" style="padding:1.5rem;">
+              <div class="card-icon">${icons[i-1]}</div>
+              <h3>${title}</h3>
+              <p>${desc}</p>
+            </div>
+          </div>`;
+      }
+    }
+    loadContent();
+  </script>
+</body>
+</html>
