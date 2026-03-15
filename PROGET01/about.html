@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – Digis Digital</title>
+  <meta name="description" content="Learn about Digis Digital – our story, mission, vision, and the team behind Sri Lanka's fastest-growing digital marketing agency." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .glow-orb-1 { background: rgba(192,25,45,0.18) !important; }
+    .glow-orb-2 { background: rgba(139,0,0,0.12) !important; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-brand">
+      <img src="img/logo.png" alt="Digis Digital Marketing" style="height:46px;width:auto;display:block;" />
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="nav-cta">Login</a>
+    </div>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="section" style="padding-top:8rem; padding-bottom:4rem; position:relative; overflow:hidden;">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="section-inner text-center">
+      <span class="section-label fade-up">Our Story</span>
+      <h1 class="section-title fade-up delay-1" id="aboutTitle">About Digis Digital</h1>
+      <p class="section-subtitle fade-up delay-2" style="margin:0 auto; font-size:1.1rem;" id="aboutBody">Loading...</p>
+    </div>
+  </section>
+
+  <!-- TEAM IMAGE BANNER -->
+  <section style="padding:0; overflow:hidden; max-height:500px;">
+    <img src="img/about_team.png" alt="Digis Digital Team" style="width:100%; object-fit:cover; display:block; mask-image:linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.8) 70%, transparent 100%); -webkit-mask-image:linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.8) 70%, transparent 100%);" />
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section class="section" style="padding-top:3rem;">
+    <div class="section-inner">
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon" style="background:rgba(108,99,255,0.15);">🎯</div>
+            <h3>Our Mission</h3>
+            <p id="aboutMission">Loading...</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon" style="background:rgba(0,212,255,0.1);">🔭</div>
+            <h3>Our Vision</h3>
+            <p id="aboutVision">Loading...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section" style="background:rgba(255,255,255,0.015); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="section-inner">
+      <div class="text-center" style="margin-bottom:3rem;">
+        <span class="section-label">What We Stand For</span>
+        <h2 class="section-title">Our Core Values</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon">💡</div>
+            <h3>Innovation</h3>
+            <p>We constantly push boundaries and embrace new technologies to deliver cutting-edge solutions for our clients.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon" style="background:rgba(0,212,255,0.1);">🤝</div>
+            <h3>Integrity</h3>
+            <p>We operate with full transparency, building trust through honest communication and delivering on every promise.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon" style="background:rgba(34,211,160,0.1);">📈</div>
+            <h3>Results-Driven</h3>
+            <p>Every campaign is measured against clear KPIs. We are committed to delivering tangible, measurable growth.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon" style="background:rgba(249,168,37,0.1);">🌟</div>
+            <h3>Excellence</h3>
+            <p>From strategy to execution, we maintain the highest standards of quality in everything we produce.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon" style="background:rgba(239,68,68,0.1);">❤️</div>
+            <h3>Client-First</h3>
+            <p>Our clients' success is our success. We go above and beyond to ensure their growth and satisfaction.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-icon" style="background:rgba(139,92,246,0.1);">🌍</div>
+            <h3>Impact</h3>
+            <p>We believe in contributing positively to the local digital economy and empowering Sri Lankan businesses.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="text-center" style="margin-bottom:3rem;">
+        <span class="section-label">The People</span>
+        <h2 class="section-title" id="teamTitle">Meet Our Team</h2>
+        <p class="section-subtitle" id="teamSubtitle">Loading...</p>
+      </div>
+      <div class="grid-3" id="teamGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="section" style="background:rgba(192,25,45,0.08); border-top:1px solid rgba(192,25,45,0.2);">
+    <div class="section-inner text-center">
+      <h2 class="section-title">Work With <span style="background:var(--gradient-btn);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Our Team</span></h2>
+      <p class="section-subtitle" style="margin:1rem auto 2rem;">Let's build something amazing together.</p>
+      <a href="https://wa.me/94762167260?text=Hello%20Digis%20Digital%2C%20I%20would%20like%20a%20free%20consultation." target="_blank" rel="noopener" class="btn btn-primary">💬 Chat on WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" style="margin-bottom:1rem; display:inline-block;">
+            <img src="img/logo.png" alt="Digis Digital Marketing" style="height:50px;width:auto;display:block;" />
+          </a>
+          <p id="footerTagline">Empowering brands with smart digital strategies.</p>
+          <div style="display:flex; gap:0.75rem; margin-top:1.25rem;">
+            <a href="https://www.facebook.com/digis.lk" target="_blank" rel="noopener" title="Facebook" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:all 0.2s;font-size:0.85rem;font-weight:700;" onmouseover="this.style.borderColor='var(--primary)';this.style.background='rgba(192,25,45,0.15)';" onmouseout="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.06)';">f</a>
+            <a href="https://www.instagram.com/digis.lk/" target="_blank" rel="noopener" title="Instagram" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:all 0.2s;font-size:0.75rem;font-weight:700;" onmouseover="this.style.borderColor='var(--primary)';this.style.background='rgba(192,25,45,0.15)';" onmouseout="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.06)';">ig</a>
+            <a href="https://www.linkedin.com/in/suneth-anurudda-a5b424377/" target="_blank" rel="noopener" title="LinkedIn" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:all 0.2s;font-size:0.75rem;font-weight:700;" onmouseover="this.style.borderColor='var(--primary)';this.style.background='rgba(192,25,45,0.15)';" onmouseout="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.06)';">in</a>
+            <a href="https://whatsapp.com/channel/0029Vb6W3sHKbYMFneuImf0X" target="_blank" rel="noopener" title="WhatsApp Channel" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:all 0.2s;font-size:1rem;" onmouseover="this.style.borderColor='#25D366';this.style.background='rgba(37,211,102,0.12)';" onmouseout="this.style.borderColor='var(--border)';this.style.background='rgba(255,255,255,0.06)';">💬</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html">Staff Login</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html">Social Media</a>
+          <a href="services.html">SEO</a>
+          <a href="services.html">PPC Advertising</a>
+          <a href="services.html">Content Marketing</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:+94762167260" id="footerPhone">+94 76 216 7260</a>
+          <a href="mailto:digisdigital@gmail.com" id="footerEmail">digisdigital@gmail.com</a>
+          <a href="#" id="footerAddress">Colombo, Sri Lanka</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Digis Digital. All rights reserved.</p>
+        <p style="color:var(--primary);">Made with ❤️ in Sri Lanka</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/db.js"></script>
+  <script>
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+
+    async function loadContent() {
+      await DigiDB.init();
+      const keys = ['about_title','about_body','about_mission','about_vision','team_title','team_subtitle','footer_tagline','contact_phone','contact_email','contact_address'];
+      const data = {};
+      for (const k of keys) { const r = await DigiDB.get(DigiDB.STORES.CONTENT, k); if (r) data[k] = r.value; }
+
+      const set = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
+      set('aboutTitle', data.about_title);
+      set('aboutBody', data.about_body);
+      set('aboutMission', data.about_mission);
+      set('aboutVision', data.about_vision);
+      set('teamTitle', data.team_title);
+      set('teamSubtitle', data.team_subtitle);
+      set('footerTagline', data.footer_tagline);
+      if (data.contact_phone) { set('footerPhone', data.contact_phone); document.getElementById('footerPhone').href = 'tel:' + data.contact_phone.replace(/\s/g,''); }
+      if (data.contact_email) { set('footerEmail', data.contact_email); document.getElementById('footerEmail').href = 'mailto:' + data.contact_email; }
+      set('footerAddress', data.contact_address);
+
+      // Team grid (fetch team members from DB)
+      const allUsers = await DigiDB.getAll(DigiDB.STORES.USERS);
+      const roleColors = { admin: '#a599ff', manager: '#00D4FF', teamwork: '#22d3a0' };
+      const roleEmoji = { admin: '👑', manager: '💼', teamwork: '🤝' };
+      const grid = document.getElementById('teamGrid');
+      grid.innerHTML = '';
+      allUsers.filter(u => u.showOnSite !== false).forEach(u => {
+        grid.innerHTML += `
+          <div class="card">
+            <div class="card-content">
+              <div style="width:64px;height:64px;border-radius:50%;background:var(--gradient-btn);display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin-bottom:1rem;">${roleEmoji[u.role] || '👤'}</div>
+              <h3>${u.name}</h3>
+              <p style="display:flex;align-items:center;gap:0.5rem;margin-top:0.5rem;">
+                <span style="display:inline-block;padding:0.2rem 0.6rem;border-radius:6px;font-size:0.75rem;font-weight:700;text-transform:uppercase;background:rgba(108,99,255,0.15);color:${roleColors[u.role]||'#fff'};">${u.role}</span>
+              </p>
+            </div>
+          </div>`;
+      });
+      if (allUsers.length === 0) {
+        grid.innerHTML = '<p style="color:var(--text-muted); text-align:center; grid-column:1/-1;">Team members will be displayed here.</p>';
+      }
+    }
+
+    loadContent();
+  </script>
+</body>
+</html>
